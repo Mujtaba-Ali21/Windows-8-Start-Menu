@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Windows 8 Start Menu</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        body {
+            background-color: #180052;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px;
+            font-weight: 100;
+            font-size: 3rem;
+        }
+
+        .nav span {
+            font-weight: 100;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+
+        .container {
+            height: 23vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-2 {
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        .card {
+            margin: 5px;
+            background-color: transparent;
+            height: 130px;
+            min-width: 230px;
+            perspective: 1000px;
+        }
+
+        .small-card {
+            margin: 5px;
+            background-color: transparent;
+            height: 130px;
+            min-width: 130px;
+            perspective: 1000px;
+
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 1.5s;
+            transform-style: preserve-3d;
+        }
+
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+
+        .card-front {
+            background-color: #00879d;
+            color: white;
+        }
+
+
+        .card-back {
+            background-color: #0896ac;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <span class="nav">
+        Start
+        <span>User <i class="fa-solid fa-user" style=" width: 35px; height: 35px; background-color: #464646; padding:3px 0 0 5px;"></i></span> 
+    </span>
+
+    <div class="container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <i class="fa-sharp fa-solid fa-envelope fa-4x" style="margin-top: 30px;"></i>
+                    <p style="text-align:start; margin-left: 10px;">Mail</p>
+                </div>
+                <div class="card-back">
+                    <h1>Hey There!</h1>
+                    <p>Check Your Mails</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-color: #5736b1;">
+                    <i class="fa-sharp fa-solid fa-calendar-days fa-4x" style="margin-top: 30px;"></i>
+                    <p style="text-align:start; margin-left: 10px;">Calendar</p>
+                </div>
+                <div class="card-back" style="background-color: #6b49ca;">
+                    <h2>Here You Can</h1>
+                        <p>schedule meetings and events and get reminders about upcoming activities</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card small-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-color: #2d89ef;">
+                    <i class="fa-brands fa-internet-explorer fa-4x" style="margin-top: 30px;"></i>
+                    <p style="text-align:start; margin-left: 10px;">Internet Explorer</p>
+                </div>
+                <div class="card-back" style="background-color: #4d96e9;">
+                    <h3>Here You Can</h3>
+                    <p>Search ANYTHING He! He!</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card small-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-color: #008e00;">
+                    <i class="fa-brands fa-windows fa-4x" style="margin-top: 30px;"></i>
+                    <p style="text-align:start; margin-left: 10px;">Store</p>
+                </div>
+                <div class="card-back" style="background-color: #07b607;">
+                    <h2>Here You Can</h2>
+                    <p>Buy Worst Games</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card" style="margin-left: 40px;">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://img.peapix.com/802614227513589181_480.jpg" alt="Bing" style="height: 130px;">
+                    <p style="text-align:start; position: relative; bottom: 40px; left: 10px; z-index: 1;">Bing</p>
+                </div>
+                <div class="card-back" style="background-color: #6b49ca;">
+                    <h1>Best Search Engine Ever</h1>
+                    <!-- <p>schedule meetings and events and get reminders about upcoming activities</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2nd Row  -->
+
+    <div class="container-2">
+
+        <!-- Card 1 -->
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-color: #d24726;">
+                    <img src="https://www.guidingtech.com/wp-content/uploads/People-Hub-Icon_4d470f76dc99e18ad75087b1b8410ea9.png" style="margin-top: 30px; height: 60px;" alt="">
+                    <p style="text-align:start; margin-left: 10px;">People</p>
+                </div>
+                <div class="card-back"  style="background-color: #d9522c;">
+                    <h1>Here You Can</h1>
+                    <p>Contact Others</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-color: #008a9f;">
+                    <i class="fa-regular fa-image fa-4x" style="margin-top: 30px;"></i>
+                    <p style="text-align:start; margin-left: 10px;">Photos</p>
+                </div>
+                <div class="card-back" style="background-color: #0896ac;">
+                    <h2>Here You Can</h1>
+                        <p>Save Your Images</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card small-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-color: #96009e;">
+                    <i class="fa-solid fa-map-location-dot fa-4x" style="margin-top: 30px;"></i>
+                    <p style="text-align:start; margin-left: 10px;">Maps</p>
+                </div>
+                <div class="card-back" style="background-color: #96009e;">
+                    <h1>Maps</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card small-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-color: #0a59c1;">
+                    <i class="fa-solid fa-cloud fa-4x" style="margin-top: 30px;"></i>
+                    <p style="text-align:start; margin-left: 10px;">SkyDrive</p>
+                </div>
+                <div class="card-back" style="background-color: #0a59c1;">
+                    <h2>Here You Can</h2>
+                    <p>Buy Worst Games</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card" style="margin-left: 40px;">
+            <div class="card-inner">
+                <div class="card-front" style="background-color: #00879d;">
+                    <i class="fa-solid fa-suitcase fa-4x" style="margin-top: 30px;"></i>
+                    <p style="text-align:start; margin-left: 10px;">Travel</p>
+                </div>
+                <div class="card-back" style="background-color: #00879d;">
+                    <h1>Travel The World</h1>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
